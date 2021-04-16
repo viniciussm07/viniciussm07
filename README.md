@@ -1,4 +1,4 @@
 ### Hi there I'm Vinicius  👋
 
-* Programming beginner
+* Novice programmer
 * I'm from São Carlos - SP, Brazil
