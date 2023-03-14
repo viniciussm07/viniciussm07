@@ -2,6 +2,7 @@
 
 * Web Dev
 * I'm from São Carlos - SP, Brazil
+* Working at Sustento Energia Solar https://github.com/devSustento
 
 <div align="center">
       <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=viniciussm07&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
