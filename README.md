@@ -1,6 +1,6 @@
 ### Hi there I'm Vinicius  👋
 
-* Software engineer
+* Web Developer Full Stack
 * I'm from São Carlos - SP, Brazil
 
 <div align="center">
