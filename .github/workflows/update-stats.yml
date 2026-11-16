@@ -4,7 +4,9 @@ name: Update GitHub Profile Stats
 on:
   schedule:
     - cron: "0 3 * * *"
+
   workflow_dispatch:
+
   push:
     branches:
       - main
@@ -26,25 +28,30 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      # DARK THEME - STATISTICS
+      # ==========================================
+      # ALL-TIME STATISTICS
+      # ==========================================
+
       - name: Generate dark statistics
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: username=viniciussm07&show_icons=true&hide_border=true&bg_color=282A36&title_color=BD93F9&text_color=F8F8F2&icon_color=FF79C6
+          options: username=viniciussm07&show_icons=true&include_all_commits=true&hide_border=true&bg_color=282A36&title_color=BD93F9&text_color=F8F8F2&icon_color=FF79C6
           path: assets/stats/stats-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # LIGHT THEME - STATISTICS
       - name: Generate light statistics
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: username=viniciussm07&show_icons=true&hide_border=true&bg_color=FFFFFF&title_color=6C42A6&text_color=333333&icon_color=DB2777
+          options: username=viniciussm07&show_icons=true&include_all_commits=true&hide_border=true&bg_color=FFFFFF&title_color=6C42A6&text_color=333333&icon_color=DB2777
           path: assets/stats/stats-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # DARK THEME - LANGUAGES
+      # ==========================================
+      # TOP LANGUAGES
+      # ==========================================
+
       - name: Generate dark languages
         uses: stats-organization/github-readme-stats-action@v2
         with:
@@ -53,7 +60,6 @@ jobs:
           path: assets/stats/languages-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # LIGHT THEME - LANGUAGES
       - name: Generate light languages
         uses: stats-organization/github-readme-stats-action@v2
         with:
@@ -61,6 +67,34 @@ jobs:
           options: username=viniciussm07&layout=compact&langs_count=6&hide_border=true&bg_color=FFFFFF&title_color=6C42A6&text_color=333333
           path: assets/stats/languages-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ==========================================
+      # 2025 STATISTICS
+      # ==========================================
+
+      - name: Generate 2025 statistics
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=viniciussm07&commits_year=2025&show_icons=true&hide_border=true&bg_color=282A36&title_color=BD93F9&text_color=F8F8F2&icon_color=FF79C6
+          path: assets/stats/stats-2025.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ==========================================
+      # 2026 STATISTICS
+      # ==========================================
+
+      - name: Generate 2026 statistics
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=viniciussm07&commits_year=2026&show_icons=true&hide_border=true&bg_color=282A36&title_color=BD93F9&text_color=F8F8F2&icon_color=FF79C6
+          path: assets/stats/stats-2026.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ==========================================
+      # COMMIT GENERATED FILES
+      # ==========================================
 
       - name: Commit generated cards
         run: |
