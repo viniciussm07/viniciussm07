@@ -1,0 +1,75 @@
+
+name: Update GitHub Profile Stats
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/update-stats.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-stats
+  cancel-in-progress: false
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      # DARK THEME - STATISTICS
+      - name: Generate dark statistics
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=viniciussm07&show_icons=true&hide_border=true&bg_color=282A36&title_color=BD93F9&text_color=F8F8F2&icon_color=FF79C6
+          path: assets/stats/stats-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # LIGHT THEME - STATISTICS
+      - name: Generate light statistics
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=viniciussm07&show_icons=true&hide_border=true&bg_color=FFFFFF&title_color=6C42A6&text_color=333333&icon_color=DB2777
+          path: assets/stats/stats-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # DARK THEME - LANGUAGES
+      - name: Generate dark languages
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=viniciussm07&layout=compact&langs_count=6&hide_border=true&bg_color=282A36&title_color=BD93F9&text_color=F8F8F2
+          path: assets/stats/languages-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # LIGHT THEME - LANGUAGES
+      - name: Generate light languages
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=viniciussm07&layout=compact&langs_count=6&hide_border=true&bg_color=FFFFFF&title_color=6C42A6&text_color=333333
+          path: assets/stats/languages-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit generated cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add assets/stats/*.svg
+
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update GitHub profile stats"
+            git push
+          fi
