@@ -39,6 +39,7 @@ jobs:
           options: username=viniciussm07&show_icons=true&include_all_commits=true&hide_border=true&bg_color=282A36&title_color=BD93F9&text_color=F8F8F2&icon_color=FF79C6
           path: assets/stats/stats-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       - name: Generate light statistics
         uses: stats-organization/github-readme-stats-action@v2
@@ -47,6 +48,7 @@ jobs:
           options: username=viniciussm07&show_icons=true&include_all_commits=true&hide_border=true&bg_color=FFFFFF&title_color=6C42A6&text_color=333333&icon_color=DB2777
           path: assets/stats/stats-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       # ==========================================
       # TOP LANGUAGES
@@ -59,6 +61,7 @@ jobs:
           options: username=viniciussm07&layout=compact&langs_count=6&hide_border=true&bg_color=282A36&title_color=BD93F9&text_color=F8F8F2
           path: assets/stats/languages-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       - name: Generate light languages
         uses: stats-organization/github-readme-stats-action@v2
@@ -67,30 +70,51 @@ jobs:
           options: username=viniciussm07&layout=compact&langs_count=6&hide_border=true&bg_color=FFFFFF&title_color=6C42A6&text_color=333333
           path: assets/stats/languages-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       # ==========================================
       # 2025 STATISTICS
       # ==========================================
 
-      - name: Generate 2025 statistics
+      - name: Generate dark statistics 2025
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: username=viniciussm07&commits_year=2025&show_icons=true&hide_border=true&bg_color=282A36&title_color=BD93F9&text_color=F8F8F2&icon_color=FF79C6
-          path: assets/stats/stats-2025.svg
+          options: username=viniciussm07&commits_year=2025&show_icons=true&hide_border=true&bg_color=282A36&title_color=BD93F9&text_color=F8F8F2&icon_color=FF79C6&custom_title=GitHub%20Stats%202025
+          path: assets/stats/stats-2025-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Generate light statistics 2025
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=viniciussm07&commits_year=2025&show_icons=true&hide_border=true&bg_color=FFFFFF&title_color=6C42A6&text_color=333333&icon_color=DB2777&custom_title=GitHub%20Stats%202025
+          path: assets/stats/stats-2025-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       # ==========================================
       # 2026 STATISTICS
       # ==========================================
 
-      - name: Generate 2026 statistics
+      - name: Generate dark statistics 2026
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: username=viniciussm07&commits_year=2026&show_icons=true&hide_border=true&bg_color=282A36&title_color=BD93F9&text_color=F8F8F2&icon_color=FF79C6
-          path: assets/stats/stats-2026.svg
+          options: username=viniciussm07&commits_year=2026&show_icons=true&hide_border=true&bg_color=282A36&title_color=BD93F9&text_color=F8F8F2&icon_color=FF79C6&custom_title=GitHub%20Stats%202026
+          path: assets/stats/stats-2026-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Generate light statistics 2026
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=viniciussm07&commits_year=2026&show_icons=true&hide_border=true&bg_color=FFFFFF&title_color=6C42A6&text_color=333333&icon_color=DB2777&custom_title=GitHub%20Stats%202026
+          path: assets/stats/stats-2026-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       # ==========================================
       # COMMIT GENERATED FILES
