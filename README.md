@@ -15,10 +15,10 @@ Building software, designing architectures and exploring cloud infrastructure.
 
 ## About me
 
-- 🎓 Information Systems student at University of São Paulo (USP).
-- 💻 Experience in software development and software architecture.
-- ☁️ Interested in cloud infrastructure, distributed systems and data engineering.
-- 🔬 Working with data processing, machine learning infrastructure and backend systems.
+- Information Systems student at University of São Paulo (USP).
+- Experience in software development and software architecture.
+- Interested in cloud infrastructure, distributed systems and data engineering.
+- Working with data processing, machine learning infrastructure and backend systems.
 
 ## Tech Stack
 
@@ -45,7 +45,7 @@ Building software, designing architectures and exploring cloud infrastructure.
 <a href="https://github.com/viniciussm07">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/stats/stats-dark.svg">
-    <img height="180" src="./assets/stats/stats-light.svg" alt="GitHub Statistics">
+    <img height="180" src="./assets/stats/stats-light.svg" alt="All-time GitHub Statistics">
   </picture>
 </a>
 
@@ -60,9 +60,32 @@ Building software, designing architectures and exploring cloud infrastructure.
 
 ---
 
+## Annual GitHub Activity
+
+<div align="center">
+
+### 2025
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/stats/stats-2025-dark.svg">
+  <img src="./assets/stats/stats-2025-light.svg" height="180" alt="GitHub Statistics 2025">
+</picture>
+
+### 2026
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/stats/stats-2026-dark.svg">
+  <img src="./assets/stats/stats-2026-light.svg" height="180" alt="GitHub Statistics 2026">
+</picture>
+
+</div>
+
+---
+
 <div align="center">
 
 [![GitHub followers](https://img.shields.io/github/followers/viniciussm07?style=social)](https://github.com/viniciussm07?tab=followers)
+
 [![GitHub stars](https://img.shields.io/github/stars/viniciussm07?style=social)](https://github.com/viniciussm07?tab=repositories)
 
 </div>
